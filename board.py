@@ -12,7 +12,7 @@ def set_tile(row, column):
 gray = "#808080"
 white = "#FFFFFF"
 window = tk.Tk()
-window.title("TICK TACK TOE")
+window.title("TIC TAC TOE")
 window.resizable(False,False)
 frame = tk.Frame(window)
 label = tk.Label(frame, text=("Current player is", CURRENT_PLAYER), background=gray, foreground=white, font=("Arial", 20))
