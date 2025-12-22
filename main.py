@@ -1,6 +1,7 @@
 from board import board
 
-
+def turn():
+    ...
 
 
 
