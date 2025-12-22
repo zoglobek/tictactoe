@@ -9,7 +9,12 @@ red = "#FF0000"
 
 X = "X"
 O = "O"
+global CURRENT_PLAYER
 CURRENT_PLAYER = X
+
+def set_tile(row, column):
+    ...
+
 
 def curr_player_color():
     if CURRENT_PLAYER == X:
@@ -19,8 +24,15 @@ def curr_player_color():
     return player_color
 
 
-def switch_player():
-    ...
+def switch_player(CURRENT_PLAYER):
+    if CURRENT_PLAYER == X:
+        CURRENT_PLAYER = O
+        return CURRENT_PLAYER
+    elif CURRENT_PLAYER == O:
+         CURRENT_PLAYER = X
+         return CURRENT_PLAYER
+
+
 def is_tile_set():
     ...
 
