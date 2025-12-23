@@ -1,27 +1,19 @@
-#COLOR SCHEME
-black = "#000000"
-lime = "#BBF90F"
-gray = "#808080"
-white = "#FFFFFF"
-yellow = "#FFFF00"
-blue = "#000080"
-red = "#FF0000"
+from board import places
 
-X = "X"
-O = "O"
+X = "\033[1;31mX"
+O = "\033[1;34mO"
 global CURRENT_PLAYER
 CURRENT_PLAYER = X
 
+
+def player_input():
+    tile = input("Please enter a Tile number:\n")
+    return places.update({tile:CURRENT_PLAYER})
+
+
+
 def set_tile(row, column):
     ...
-
-
-def curr_player_color():
-    if CURRENT_PLAYER == X:
-        player_color = red
-    elif CURRENT_PLAYER == O:
-        player_color = blue
-    return player_color
 
 
 def switch_player(CURRENT_PLAYER):
@@ -33,8 +25,9 @@ def switch_player(CURRENT_PLAYER):
          return CURRENT_PLAYER
 
 
-def is_tile_set():
-    ...
+def is_tile_set(tile,set_tiles:list):
+    if tile ==...:
+        ...
 
 if __name__ == "__main__":
-    ...
+    print(X, O)

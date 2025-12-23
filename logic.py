@@ -1,6 +1,4 @@
 
-def game_restart():
-    ...
 
 def is_gameover():
     ...
