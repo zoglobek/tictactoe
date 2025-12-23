@@ -12,9 +12,6 @@ def player_input():
 
 
 
-def set_tile(row, column):
-    ...
-
 
 def switch_player(CURRENT_PLAYER):
     if CURRENT_PLAYER == X:

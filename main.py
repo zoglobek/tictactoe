@@ -1,4 +1,6 @@
 from board import BOARD
+from logic import is_gameover
+
 
 def turn():
     ...
@@ -6,4 +8,6 @@ def turn():
 
 
 if __name__ == "__main__":
-    board()
+    while is_gameover():
+        turn()
+        print(BOARD)
