@@ -1,3 +1,4 @@
+from board import places
 X = "\033[1;31mX"
 O = "\033[1;34mO"
 CURRENT_PLAYER = X

@@ -4,10 +4,10 @@ import player_input
 
 def turn():
     board_draw()
-    player_input(player_input.CURRENT_PLAYER)
+    player_input.player_input()
 
 
 if __name__ == "__main__":
     print(f"welcome to a game of Tic Tack Toe {player_input.X} , {player_input.O}")
-    while is_gameover():
+    while True:
         turn()
