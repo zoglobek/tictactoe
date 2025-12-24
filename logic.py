@@ -1,4 +1,6 @@
-
+def is_tile_set(tile,set_tiles:list):
+    if tile ==...:
+        ...
 
 def is_gameover():
     ...

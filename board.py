@@ -1,17 +1,14 @@
-
-BOARD = "[1|2|3]\n[4|5|6]\n[7|8|9]"
-
 places = {1: '1', 2: '2', 3: '3',
           4: '4', 5: '5', 6: '6',
           7: '7', 8: '8', 9: '9'}
+def board_draw():
+        BOARD = (f"|{places[1]}|{places[2]}|{places[3]}|\n"
+                 f"|{places[4]}|{places[5]}|{places[6]}|\n"
+                 f"|{places[7]}|{places[8]}|{places[9]}|\n"
+                 )
+        print(BOARD)
 
-def update_of_set_tiles(BOARD, places):
 
-    for place in places.keys():
-        for spot in BOARD:
-            if str(place) != spot:
-                spot = places.get(place)
-    return spot
 
 if __name__ == "__main__":
-        print(update_of_set_tiles(BOARD, places))
+    board_draw()
