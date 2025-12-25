@@ -13,7 +13,8 @@ def player_input():
 
 
 
-def switch_player(CURRENT_PLAYER):
+def switch_player():
+    global CURRENT_PLAYER
     if CURRENT_PLAYER == X:
         CURRENT_PLAYER = O
         return CURRENT_PLAYER

@@ -2,9 +2,16 @@ from logic import is_gameover
 from board import board_draw
 import player_input
 
+
 def turn():
-    board_draw()
-    player_input.player_input()
+    while True:
+        board_draw()
+        player_input.player_input()
+        player_input.switch_player()
+        board_draw()
+        player_input.player_input()
+        player_input.switch_player()
+        board_draw()
 
 
 if __name__ == "__main__":
