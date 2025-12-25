@@ -1,15 +1,17 @@
-from player_input import player_input, X, O, CURRENT_PLAYER
+from player_input import player_input, X, O
 from board import places
 
 def is_tile_set():
-    tile = player_input()
+    global CURRENT_PLAYER
+    tile = player_input(CURRENT_PLAYER)
     global places
-    if not places[tile] == X or not places[tile] == O:
+    while places[tile] == X or places[tile] == O:
+        print("invalid tile")
+        tile = player_input()
+    else:
         print("valid")
         places.update({tile: CURRENT_PLAYER})
 
-    else:
-        print("invalid")
 
 
 
