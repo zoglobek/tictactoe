@@ -8,7 +8,8 @@ def player_input():
     global places
     global CURRENT_PLAYER
     tile = input(f"{CURRENT_PLAYER} Please enter a Tile number:\n")
-    places.update({int(tile):CURRENT_PLAYER})
+    return int(tile)
+
 
 
 

@@ -1,20 +1,22 @@
 from logic import is_gameover
 from board import board_draw
-import player_input
+from player_input import player_input, X, O, switch_player
+from logic import is_tile_set
 
 
 def turn():
+
     while True:
         board_draw()
-        player_input.player_input()
-        player_input.switch_player()
+        is_tile_set()
+        switch_player()
         board_draw()
-        player_input.player_input()
-        player_input.switch_player()
+        is_tile_set()
+        switch_player()
         board_draw()
 
 
 if __name__ == "__main__":
-    print(f"welcome to a game of Tic Tack Toe {player_input.X} , {player_input.O}")
+    print(f"welcome to a game of Tic Tack Toe {X} , {O}")
     while True:
         turn()
