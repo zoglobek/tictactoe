@@ -30,6 +30,10 @@ def switch_player(CURRENT_PLAYER):
 
 
 if __name__ == "__main__":
-    # ...
+
+    #
     CURRENT_PLAYER = X
     print(player_input(CURRENT_PLAYER))
+    CURRENT_PLAYER = switch_player(CURRENT_PLAYER)
+    print(player_input(CURRENT_PLAYER))
+    CURRENT_PLAYER = switch_player(CURRENT_PLAYER)

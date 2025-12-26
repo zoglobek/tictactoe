@@ -11,17 +11,19 @@ def is_tile_set(CURRENT_PLAYER):
         places.update({tile: CURRENT_PLAYER})
 
 
-
+def check_winner():
+    ...
 
 def is_gameover():
     values = places.values()
     for value in values:
         if value is not value.isdigit():
-            ...
+            check_winner()
+    else:
+        ...
 
 
-def check_winner():
-    ...
+
 if __name__ == "__main__":
     ...
     # is_tile_set(CURRENT_PLAYER)
