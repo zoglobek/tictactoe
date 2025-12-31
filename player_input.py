@@ -4,11 +4,20 @@ O = "\033[1;34mO"
 
 def player_input(CURRENT_PLAYER):
     while True:
-        tile = int(input(f"{CURRENT_PLAYER} Please enter a Tile number:\n"))
-        if tile in range(1,10):
-            return (tile)
+        tile = (input(f"{CURRENT_PLAYER} Please enter a Tile number:\n"))
+        if tile.isdigit():
+            tile = int(tile)
+            if tile in range(1,10):
+                return (tile)
+            else:
+                print("Tile is not in range")
         else:
             print("Invalid input")
+
+
+
+
+
 
 
 def who_is_player(CURRENT_PLAYER):
