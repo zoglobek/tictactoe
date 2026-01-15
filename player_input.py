@@ -17,22 +17,12 @@ def player_input(CURRENT_PLAYER):
 
 
 
-
-
-
-def who_is_player(CURRENT_PLAYER):
-    print(CURRENT_PLAYER)
-
-
-
 def switch_player(CURRENT_PLAYER):
     if CURRENT_PLAYER == X:
         CURRENT_PLAYER = O
-        who_is_player(CURRENT_PLAYER)
         return CURRENT_PLAYER
     else:
         CURRENT_PLAYER = X
-        who_is_player(CURRENT_PLAYER)
         return CURRENT_PLAYER
 
 

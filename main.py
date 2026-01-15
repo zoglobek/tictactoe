@@ -1,18 +1,19 @@
-from board import board_draw, places,  row_1, row_2, row_3, column_2, column_3, column_1, diagonal_1, diagonal_2, all_tiles
+from board import board_draw, places, checks
 from player_input import  X, O, switch_player
 from logic import is_tile_set
 from logic import check_winner
+from logic import is_gameover
 
 
-def turn(CURRENT_PLAYER, diagonal_1, diagonal_2, column_1, column_2, column_3, row_1, row_2, row_3, all_tiles):
+def turn(CURRENT_PLAYER):
     while True:
         board_draw()
         is_tile_set(CURRENT_PLAYER)
-        if check_winner(diagonal_1, diagonal_2, column_1, column_2, column_3, row_1, row_2, row_3, all_tiles):
-            print("Game Over")
-            return False
         board_draw()
         CURRENT_PLAYER = switch_player(CURRENT_PLAYER)
+        checks()
+        if check_winner():
+            break
 
 
 
@@ -20,4 +21,5 @@ def turn(CURRENT_PLAYER, diagonal_1, diagonal_2, column_1, column_2, column_3, r
 if __name__ == "__main__":
     print(f"welcome to a game of Tic Tack Toe {X} , {O}")
     CURRENT_PLAYER = X
-    turn(CURRENT_PLAYER, diagonal_1, diagonal_2, column_1, column_2, column_3, row_1, row_2, row_3, all_tiles)
+    turn(CURRENT_PLAYER)
+    is_gameover()
