@@ -22,9 +22,9 @@ def three_in_row():
     three_o
     for row in all_rows:
         if row == three_x:
-            return X
+            return f"Winner is {X}"
         elif row == three_o:
-            return O
+            return f"Winner is {O}"
 
 def three_in_coulmn():
     *_, all_columns  = checks()
@@ -32,9 +32,9 @@ def three_in_coulmn():
     three_o
     for column in all_columns:
         if column == three_x:
-            return X
+            return f"Winner is {X}"
         elif column == three_o:
-            return O
+            return f"Winner is {O}"
 
 
 def three_diagonal():
@@ -44,9 +44,10 @@ def three_diagonal():
     three_o
     for diagonal in all_diagonals:
         if diagonal == three_x:
-            return X
+            return f"Winner is {X}"
         elif diagonal == three_o:
-            return O
+            return  f"Winner is {O}"
+
 
 def out_of_tiles():
     *_, all_tiles, _, _ = checks()
@@ -58,25 +59,31 @@ def out_of_tiles():
 
 def check_winner():
     row_1, row_2, row_3, column_1, column_2, column_3, diagonal_1, diagonal_2, all_tiles, all_rows, all_columns  = checks()
-    if three_diagonal():
-        print(f"The winner is {three_diagonal()}")
+    diagonal_won = three_diagonal()
+    column_won = three_in_coulmn()
+    row_won = three_in_row()
+    no_tiles = out_of_tiles()
+    if diagonal_won:
+        print("Game Over")
+        print(diagonal_won)
         return True
-    elif three_in_coulmn():
-        print(f"The winner is {three_in_coulmn()}")
+    elif column_won:
+        print("Game Over")
+        print(column_won)
         return True
-    elif three_in_row():
-        print(f"The winner is {three_in_row()}")
+    elif row_won:
+        print("Game Over")
+        print(row_won)
         return True
-    elif out_of_tiles():
+    elif no_tiles:
+        print("Game Over")
         print("TIE")
         return True
 
 
 
 
-def is_gameover():
-    if check_winner():
-        print("Game Over")
+
 
 
 
